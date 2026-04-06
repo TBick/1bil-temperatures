@@ -35,7 +35,4 @@ Analyze a file:
 ```
 
 ## Notes
-
-- The default dataset path used by both programs is `resources/generated_temperatures.txt`.
-- The repository already includes a generated dataset at that path.
-- The analyzer is currently a single-threaded work-in-progress parser.
+- Both binaries reference ./resources, which does not exist in this repo. Create resource folder before running any binaries. `mkdir -p resources/` 
