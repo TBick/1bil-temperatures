@@ -8,9 +8,9 @@
   // Libraries to use for all targets.
   "dependencies": [ ],
   // Authors, optionally with email.
-  "authors": [ "John Doe <john.doe@example.com>" ],
+  "authors": [ "Troy Bick <troy.bick00@gmail.com>" ],
   // Version using semantic versioning.
-  "version": "0.1.0",
+  "version": "0.1.1",
   // Sources compiled for all targets.
   "sources": [ ],
   // Test sources compiled for all targets.
@@ -29,17 +29,26 @@
   // "target": "windows-x64",
   // Targets.
   "targets": {
-    "analyze_temps": {
+    "analyze_temps-debug": {
       // Executable or library.
       "type": "executable",
       "sources-override": [ "src/analyze_temps/**" ],
       // Additional libraries, sources
       // and overrides of global settings here.
     },
-    "generate_temps": {
+    "analyze_temps-release": {
+      // Executable or library.
+      "type": "executable",
+      "sources-override": [ "src/analyze_temps/**" ],
+      "opt": "O3",
+      // Additional libraries, sources
+      // and overrides of global settings here.
+    },
+    "generate_temps-release": {
       // Executable or library.
       "type": "executable",
       "sources-override": [ "src/generate_temps/**" ],
+      "opt": "O3",
       // Additional libraries, sources
       // and overrides of global settings here.
     },
@@ -48,6 +57,6 @@
   // CPU name, used for optimizations in the LLVM backend.
   "cpu": "generic",
   // Optimization: "O0", "O1", "O2", "O3", "O4", "O5", "Os", "Oz".
-  "opt": "O0"
+  "opt": "O0",
   // See resources/examples/project_all_settings.json and 'c3c --list-project-properties' to see more properties.
 }
