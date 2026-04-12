@@ -52,6 +52,14 @@
       // Additional libraries, sources
       // and overrides of global settings here.
     },
+    "clean_room_temps": {
+      // Executable or library.
+      "type": "executable",
+      "sources-override": [ "src/clean_room_temps/**" ],
+      "opt": "O3",
+      // Additional libraries, sources
+      // and overrides of global settings here.
+    },
   },
   // Global settings.
   // CPU name, used for optimizations in the LLVM backend.
