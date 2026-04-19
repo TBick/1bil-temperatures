@@ -9,6 +9,19 @@ Small C3 project for generating and analyzing synthetic temperature data.
 
 This repository's `.gitignore` excludes `build/` and the entire `resources/` tree. That means a fresh clone will not include compiled binaries, generated datasets, or any local reference files you may have kept under `resources/`.
 
+## Initialize
+
+Run the repo initializer once after cloning:
+
+```sh
+bash scripts/init_repo.sh
+```
+
+The script creates the local-only directories this project expects:
+
+- `build/`
+- `resources/`
+
 ## Targets
 
 - `generate_temps-release`: writes synthetic records in `STATION;TEMP` format.
@@ -46,11 +59,7 @@ Build outputs are written to `build/`.
 
 ## Run
 
-For a clean clone, create a local `resources/` directory first if you want to use the default paths shown below:
-
-```sh
-mkdir -p resources
-```
+For a clean clone, run `bash scripts/init_repo.sh` first if you want to use the default local paths shown below.
 
 Generate a small file:
 
@@ -66,7 +75,7 @@ Generator arguments are:
 
 If omitted, the generator defaults to `resources/generated_temperatures.txt`, `1000000000` rows, and a progress update every `2500` rows.
 
-Because `resources/` is ignored by git, that default output path only works after you create the directory locally.
+Because `resources/` is ignored by git, that default output path only works after you initialize the local directories.
 
 Analyze a file:
 
